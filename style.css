@@ -1,0 +1,235 @@
+@font-face {
+    font-family: courier;
+    src: url(Courier_Prime.ttf);
+}
+
+@font-face {
+    font-family: ocr;
+    src: url(ocr.ttf);
+}
+
+@font-face {
+    font-family: urban;
+    src: url(UrbanDramaDemoRegular-owa5V.ttf);
+}
+
+body {
+    background-color: #181818;
+}
+
+.banner {
+    width: 30%;
+    position: relative;
+    left: 20%;
+}
+
+.bantext {
+    position: relative;
+    right: 80%;
+}
+
+.aboutme {
+    color: #39A14A;
+    font-family: 'ocr', sans-serif;
+
+}
+
+.div1 {
+    position: relative;
+    left: 27.65%;
+    width: 47%;
+    background: #181818;
+    border-radius: 15px;
+    box-shadow: -15px -15px 10px rgba(0, 0, 0, 0.1),
+        15px 15px 15px #0000008c,
+        inset -5px -5px 5px rgba(0, 0, 0, 0.1),
+        inset 15px 15px 50px #0000008c;
+
+}
+
+
+.paragraph {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 50px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'courier', sans-serif;
+}
+
+.banner_text {
+    position: relative;
+    font-size: 500%;
+    color: white;
+    font-family: 'urban', sans-serif;
+    right: 45%;
+    width: auto;
+}
+
+.div2 {
+    background-image: url(background2.png);
+    border-radius: 100px;
+    box-shadow: -15px -15px 10px rgba(0, 0, 0, 0.1),
+        15px 15px 15px #0000008c;
+}
+
+.container {
+    text-align: center;
+}
+
+.button {
+    width: 170px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button-1 {
+    background-color: transparent;
+    font-family: 'ocr', sans-serif;
+
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+
+}
+
+.blue:hover {
+    box-shadow: 0 0 10px 0 #00A0E9 inset, 0 0 20px 2px #00A0E9;
+    border: 3px solid #00A0E9;
+}
+
+.blue {
+    border: 3px solid #00A0E9;
+    color: #00A0E9;
+}
+
+.white:hover {
+    box-shadow: 0 0 10px 0 white inset, 0 0 20px 2px white;
+    border: 3px solid white;
+}
+.white {
+    border: 3px solid white;
+    color: white;
+}
+.orange:hover {
+    box-shadow: 0 0 10px 0 #FFA500 inset, 0 0 20px 2px #FFA500;
+    border: 3px solid #FFA500;
+}
+.orange {
+    border: 3px solid #FFA500;
+    color: #FFA500;
+}
+
+.box {
+    position: relative;
+    left: 5%;
+    width: 400px;
+    height: 400px;
+    background: black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.box::before {
+    content: "";
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(315deg,#00A0E9,#FFA500);
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+.box:hover::before{
+    inset: -20px 0px;
+}
+@keyframes animate 
+{
+  0%
+  {
+     transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: #181818;
+    border-radius: 50%;
+    z-index: 1;
+}
+.content
+{
+    position: absolute;
+    inset: 30px;
+    border: 6px solid black;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+}
+.box:hover .content img
+{
+    opacity: 0;
+}
+.content h2
+{
+    position: relative;
+    font-size: 1.5em;
+    font-family: 'ocr', sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0,05em;
+    text-transform: uppercase;
+
+}
+.content h2 span
+{
+    font-weight: 300;
+    font-size: 0.75em;
+
+}
+.content a
+{
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: white;
+    color: #FFA500;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.content a:hover
+{
+    letter-spacing: 0.2em;
+}
